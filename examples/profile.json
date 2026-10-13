@@ -1,0 +1,78 @@
+{
+  "slug": "williamhgates",
+  "url": "https://www.linkedin.com/in/williamhgates",
+  "name": "Bill Gates",
+  "headline": "Chair, Gates Foundation and Founder, Breakthrough Energy",
+  "location": "Seattle, Washington, United States",
+  "country": "US",
+  "about": "Chair of the Gates Foundation. Founder of Breakthrough Energy. Co-founder of Microsoft. Voracious reader. Avid traveler. Active blogger.",
+  "badges": "Creator, Top Voice",
+  "followers_count": 40727634,
+  "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQF-RYZP55jmXA/profile-displayphoto-shrink_200_200/B56ZRi8g.aGsAY-/0/1736826818802?e=2147483647&v=beta&t=bKWfN6UwwtiCqFWsG7rBELbd48qJOAMLdxhBzzkJV0k",
+  "experience": [
+    {
+      "title": "Co-chair",
+      "company": "Gates Foundation",
+      "company_url": "https://www.linkedin.com/company/gates-foundation",
+      "start": "2000",
+      "end": null,
+      "is_current": true
+    },
+    {
+      "title": "Founder",
+      "company": "Breakthrough Energy",
+      "company_url": "https://www.linkedin.com/company/breakthrough-energy",
+      "start": "2015",
+      "end": null,
+      "is_current": true
+    },
+    {
+      "title": "Co-founder",
+      "company": "Microsoft",
+      "company_url": "https://www.linkedin.com/company/microsoft",
+      "start": "1975",
+      "end": null,
+      "is_current": true
+    }
+  ],
+  "education": [
+    {
+      "school": "Harvard University",
+      "school_url": "https://www.linkedin.com/school/harvard-university",
+      "start_year": 1973,
+      "end_year": 1975
+    }
+  ],
+  "recent_posts": [
+    {
+      "url": "https://www.linkedin.com/posts/williamhgates_child-malnutrition-is-one-of-africas-biggest-activity-7514893923710984192-ZuIL",
+      "published_at": "2026-10-11T03:45:31+00:00",
+      "text": "Tackling malnutrition requires more than a steady supply of nutritious food. Access to healthcare, clean water, and safe sanitation are just as essential to growing up healthy. ",
+      "like_count": 1424
+    },
+    {
+      "url": "https://www.linkedin.com/posts/williamhgates_those-white-clouds-you-see-behind-planes-activity-7514069962865500160-CDii",
+      "published_at": "2026-10-08T21:11:23+00:00",
+      "text": "Those white clouds you see behind planes are not emissions or chemicals. They’re clouds that form when planes fly through cold, humid air, and they are responsible for half of the global warming caused by aviation. Fortunately, it’s a relatively easy fix.",
+      "like_count": 3676
+    },
+    {
+      "url": "https://www.linkedin.com/posts/williamhgates_preventing-contrails-those-white-lines-activity-7513737675791646720-T3Y1",
+      "published_at": "2026-10-07T23:11:00+00:00",
+      "text": "Preventing contrails — those white lines you sometimes see forming behind a plane as it flies — could eliminate about half of the temperature increase caused by aviation, or up to 2% of *all* global warming. That’s a mind-blowing impact for a relatively cheap and easy-to-solve problem: https://lnkd.in/e9hUEJNC",
+      "like_count": 1548
+    },
+    {
+      "url": "https://www.linkedin.com/posts/williamhgates_in-places-like-bangladesh-where-populations-activity-7513316263134162944-jKiJ",
+      "published_at": "2026-10-06T19:16:27+00:00",
+      "text": "In places like Bangladesh, where populations are dense and safe sanitation is limited, cholera can be deadly—even though it’s preventable. Dr. Firdausi Qadri’s work shows how affordable oral vaccines can protect more people and save more lives.",
+      "like_count": 1489
+    },
+    {
+      "url": "https://www.linkedin.com/posts/williamhgates_results-report-2026-activity-7511544945862926336-2Ger",
+      "published_at": "2026-10-01T21:57:52+00:00",
+      "text": "The Global Fund has helped save 72 million lives since 2002. What an achievement. It’s exceedingly rare for an organization to work this well, this consistently, for this long.\n\nBut we can’t get complacent. Donor funding cuts last year forced low-and middle-income countries to make impossible choices about how they address national health issues, including HIV, TB and malaria. Their resilience in spite of that has been remarkable, but there’s still so much work to do. Supporting the Global Fund is one of the best investments we can make in the health and well-being of future generations. ",
+      "like_count": 1483
+    }
+  ]
+}
