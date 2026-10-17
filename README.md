@@ -291,6 +291,8 @@ Long text and links are shortened here. The full outputs for every command are i
 2. `company`, `profile` and `post` ask for the public page (`/company/<name>`, `/in/<name>`, `/posts/<slug>`). Each page holds a `<script type="application/ld+json">` block with the main facts, and the page itself holds the rest (company details, work history). Only the job requests send a `Referer` header. On the pages it makes LinkedIn answer HTTP 999.
 3. Each reply is cleaned with BeautifulSoup into the fields above. Counts become integers, times become ISO 8601 UTC, tracking parameters are cut from links, and the raw HTML is dropped.
 
+A longer walkthrough with timed runs, job-count tests, what got blocked and an Ad Library CSV example: [How to scrape LinkedIn with Python](https://toolzerhub.com/blog/how-to-scrape-linkedin?utm_source=github&utm_medium=readme&utm_campaign=linkedin-scraper).
+
 ## Limits
 
 - Public data only.
