@@ -6,13 +6,13 @@
 
 Scrape public LinkedIn jobs, companies, profiles and posts with Python. No login, no API key, one file.
 
-> **Need this at scale?** The script is for learning and small jobs. The [ToolzerHub LinkedIn API](https://toolzerhub.com/apis/linkedin?utm_source=github&utm_medium=readme&utm_campaign=linkedin-scraper) returns the same data and more (Ad Library search, profile search, related profiles, the company directory and hiring signals) as JSON from any server, with no blocks to handle. 100 free credits a month, no card needed.
+> **Need this at scale?** The script is for learning and small jobs. The [ToolzerHub LinkedIn API](https://toolzerhub.com/apis/linkedin?utm_source=github&utm_medium=readme&utm_campaign=linkedin-scraper) returns the same data and more (Ad Library search, a company's recent updates and its affiliated pages) as JSON from any server, with no blocks to handle. 100 free credits a month, no card needed.
 
 ## What it scrapes
 
 | Command | What you get |
 |---|---|
-| `jobs <keywords>` | Public job search: title, company, location, post date and salary when shown. Filter by place, age and workplace type |
+| `jobs <keywords>` | Public job search: title, company, location, post date and salary when shown. Filter by place and age (LinkedIn often ignores the workplace filter) |
 | `job <id or url>...` | One job posting with its full description, seniority, employment type, industries and applicant hint |
 | `company <name>...` | A company page: about text, website, size, headquarters, specialties, follower and employee counts, similar companies |
 | `profile <name>...` | A public profile: name, headline, location, about, follower count, work history, education and a few recent posts |
@@ -294,9 +294,9 @@ Long text and links are shortened here. The full outputs for every command are i
 ## Limits
 
 - Public data only.
-- Only what a signed-out visitor sees. That means no full employee lists, no connections, no skills, no contact details, and only a few recent posts on a profile. `comments` returns the first page (about 10) of a post's comments, not all of them.
+- Only what a signed-out visitor sees. That means no full employee lists, no connections, no skills, no contact details, and only a few recent posts on a profile. `comments` returns the first page (8 in our 2026-10-17 runs) of a post's comments, not all of them.
 - `jobs` pages through results and can stop early when LinkedIn limits the next page. The script then prints a warning and returns the jobs it already has.
-- LinkedIn is strict with repeat visitors. The job commands cope better, but they also slow down on long runs. The page commands (`company`, `profile`, `post`) often give you only one or two, then LinkedIn answers HTTP 429 or 999 and the script exits with a "rate-limited or blocked" error. Run one page per command, and use a proxy that gives you a new IP per run. HTTP 999 is also what an unknown profile name gets, so check the spelling first. Run it from a home connection, or pass `--proxy` (a sticky residential proxy works best).
+- LinkedIn is strict with repeat requests. The job commands cope better, but they also slow down on long runs. Several names in one page command (`company`, `profile`, `post`) often end with HTTP 429 or 999 and a "rate-limited or blocked" error, and the command saves nothing. Run one page per command and pause between commands. HTTP 999 is also what an unknown profile name gets, so check the spelling first. Run it from a home connection, or pass `--proxy` (a sticky residential proxy works best).
 - No concurrency. The script waits 2 seconds between requests and retries a 429 once. That is all, so it stays short enough to read in one sitting.
 - It breaks when LinkedIn changes its pages. See "How we keep it working".
 
@@ -306,7 +306,7 @@ The script is for learning and small jobs. At scale you run into blocks, changin
 
 | | This script | ToolzerHub API |
 |---|---|---|
-| Data | Jobs, company pages, public profiles and posts | 20 LinkedIn endpoints: those, plus location search, Ad Library search, profile search, related profiles, the company directory and hiring signals |
+| Data | Jobs, company pages, public profiles and posts | 20 LinkedIn endpoints: those, plus location search, Ad Library search, company updates and affiliated pages |
 | Blocks and proxies | Your problem | Handled |
 | When LinkedIn changes | Wait for a fix here | Fixed on our side |
 | Cost | Free, plus your proxy | 100 free credits a month, then from $0.99 per 1,000 calls |
@@ -321,10 +321,10 @@ Every command is run against live LinkedIn pages before each update, and the "la
 Scraping publicly available data is generally allowed in many places, but it depends on your country, what you collect and how you use it. Read the Legal section below.
 
 **Why am I getting blocked?**
-LinkedIn blocks most cloud and datacenter IP addresses and slows down any IP that asks for many pages in a row. Use a home connection or a residential proxy, and slow down.
+LinkedIn refuses clients that ask for many pages in a row. On 2026-10-17 one page per command worked from a datacenter IP, while several companies in one command got HTTP 999. Run one page per command and slow down.
 
 **Can it get a company's employee list or a profile's skills?**
-No. The [ToolzerHub API](https://toolzerhub.com/apis/linkedin?utm_source=github&utm_medium=readme&utm_campaign=linkedin-scraper) has company employee, profile search and related-profile endpoints.
+No. A signed-out visitor does not see them.
 
 ## Related scrapers
 
